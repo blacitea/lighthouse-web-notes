@@ -4,4 +4,4 @@
 | Name | Start Time | Finish Time
 |---|:---|:---:|
 |Scope in Javascript| 14:53 |15:11|
-|Getting comfortable with error| 15:12 |
+|Getting comfortable with error| 15:12 | 15:33 |
