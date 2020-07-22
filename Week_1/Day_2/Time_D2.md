@@ -9,4 +9,5 @@
 |Fixing Buggy Code 1 | 16:27 | 16:47|
 |Coercion and Truthy/Falsey | 16:48 | 16:53 |
 |Impletent eqArrays | 16:56 | 17:20 |
+|Impletment assertArraysEqual | 18:30 | 18:49 |
 |Implement without | 17:21 | 17:47 | 
