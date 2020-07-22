@@ -18,3 +18,6 @@ Print = hard coded, less adeptative
 >    * One single task could be to compute and return a value (eg: zeroPad)
 >    * Another single task could be to perform a side effect such as logging a message to the screen (eg: printFarmInventory)
 > 5. Data needed by Functions should be passed in as parameters/arguments (i.e. local scope) instead of being accessed directly
+
+## Function Logic
+> If iterating through a list, and what you want is to know if anything comes back false, you can list out exceptions to return false, and set the default return as true [example](https://github.com/blacitea/lotide/blob/master/eqArray.js)
