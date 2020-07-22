@@ -11,3 +11,6 @@
 |Impletent eqArrays | 16:56 | 17:20 |
 |Impletment assertArraysEqual | 18:30 | 18:49 |
 |Implement without | 17:21 | 17:47 | 
+|Password Obfuscator | 18:53 | 19:50 |
+|Flatten | 20:08 | 20:42 |
+|Debug 1 | 20:43 | 21:17 |
