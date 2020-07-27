@@ -130,6 +130,17 @@ Chai is nice because it has hundreds of assertion (isDefined(), isFunction() etc
 
 # DO NOT add your node_modules to your gitHub
 ## We want our git to ignore the node_modules
-If you see node_modules when you check git status:
+
+>If you see node_modules when you check git status:
+>```shell
+>touch .gitignore
+>```
+>> ```
+>> node_modules
+>> ```
+> After you added the files in .gitignore, it should grey out at your VS code open folder
+>
+> You commit your .gitignore instead of your node_modules
 
 
+## DO NOT TOUCH your package-lock.json !!!!!
