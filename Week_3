@@ -1,0 +1,98 @@
+# 
+* middleware - morgan 
+* public express.static('public') << let you use image/ css, static resources>>
+
+# Catch all route
+Whatever it is, just redirect them to login page / show them 404
+Make sure it is the last get, otherwise it will misdirect your other route
+``` javascript
+app.get('*', (req, res) => {
+  res.redirect('login');
+})
+```
+
+bcrypt for non mac  // in the VM
+bcryptjs for mac
+
+Same syntax
+
+```javascript
+const bcrypt = require('bcrypt');
+const password = "chocolate";
+const salt = bcrypt.genSaltSync(10);
+console.log(salt);
+const hash = bcrpyt.hashSync(password, salt);  // or const hash = bcrpyt.hashSync(password, 10);
+console.log(hash);
+const check = bcrypt.compareSync('string of pw', the hash you got from before, the variable); 
+// this will return true/false 
+```
+
+```javascript
+//enter integer, will return a promise
+bcrypt
+.genSalt(10)
+.then((salt) => {
+  return bcrypt.hash(password, salt);
+})
+.then((hash) => [
+  console.log(`async hash`, hash);
+])
+
+
+```
+
+### Encrption of cookies
+- reversible
+- lock it with a key, and later on unlock it with that same key
+- there is a package for that! Cookie Session! 
+- replace cookie parse! 
+- req.session = null (clear everything)
+- app.use(cookieSession({
+  name: 'string, name your session',
+  key: [an array of keys(each key is a string)],
+}))
+
+## REST 
+* /urls
+* /urls/:shortURL
+* /u/:shortURL
+
+* REpresentational State Transfer
+
+* CRUD, BREAD (method you can do to a resource)
+* A naming convention for route
+- browse (all of them)                  GET /resources
+- read (particular one/some of them)    GET /resources/:id
+- edit                                  POST /resources/:id
+- add                                   POST /resources
+- delete                                POST /resources/:id/delete
+
+
+
+
+### HTTP Methods
+* GET, POST
+* PUT, PATCH, DELETE (semetic only, they are essentially POST)
+- PUT : replace the whole resource
+- PATCH : change something about the resource
+
+### JSON API's
+- giving back data only, JSON files only
+- no rendering by the server
+
+## Alt ExpressJS
+- http://restify.com/
+- hapi/ joi
+
+## Method Override (npm package)
+- make your server more semetic!
+- require('method-override);
+
+// override with POST having (?_method=DELETE) in the url
+// you can change where your request go on your form's action  
+// replace /urls/:id/delete to /urls/:id?_method=DELETE
+// and update server to catch DELETE /urls/:id
+- app.use(method-override('_method'))
+
+ 
+
